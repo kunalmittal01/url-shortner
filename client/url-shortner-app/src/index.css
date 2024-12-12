@@ -1,0 +1,101 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #024462;
+}
+
+nav {
+  background-color: #fff;
+  padding: 1rem 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+nav p {
+  font-size: 24px;
+  color: #024462;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.url-cont {
+  max-width : 30rem;
+  margin: 4rem 6rem;
+}
+
+.url-cont input {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  color: #000;
+  font-size: 14px;
+  margin-bottom: 1.2rem;
+}
+
+.url-wrap {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background-color: white;
+}
+
+.shorten-url {
+  width: 100%;
+  min-height: 2rem;
+  background-color: #f1f1f1;
+  margin-bottom: 1rem;
+  overflow-x: auto;
+}
+
+.url-cont button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #087DA8;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.url-des {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.btn-cont {
+  display: flex;
+  justify-content: space-between;
+}
+
+.msg {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  .url-cont {
+    margin: 4rem 3rem;
+  }
+  nav {
+    padding: 1rem 3rem;
+  }
+}
