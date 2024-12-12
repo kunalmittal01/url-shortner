@@ -8,7 +8,7 @@ function App() {
   const [msg, setMsg] = useState('');
   const shortUrl = async() => {
     try {
-      const response = await axios.post( `http://localhost:8081/api/shorten-url`, {url: longUrl});
+      const response = await axios.post( `https://url-shortner-jrto.onrender.com`, {url: longUrl});
       setShortenUrl(response.data.shorturl);
     }
     catch (error) {
