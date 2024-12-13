@@ -8,13 +8,25 @@ function App() {
   const [msg, setMsg] = useState('');
   const shortUrl = async() => {
     try {
+      if(longUrl.trim()=='') {
+        setMsg('Please enter a long URL');
+        setTimeout(() => setMsg(''), 2000);
+        return;
+      }
+      const url = new URL(longUrl);
+      console.log(url);
       const response = await axios.post( `https://url-shortner-jrto.onrender.com/api/shorten-url`, {url: longUrl});
       setShortenUrl(response.data.shorturl);
     }
     catch (error) {
+      if(error.message.includes("Invalid URL")) {
+        setMsg('Invalid URL');
+        setTimeout(() => setMsg(''), 2000);
+        return;
+      }
       setMsg(error.response.data.message);
       setTimeout(() => setMsg(''), 2000);
-      console.error(error);
+      console.error(error.message.includes("Invalid URL"));
     }
   }
 
